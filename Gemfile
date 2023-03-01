@@ -13,6 +13,9 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sprockets', '< 4'
 gem 'sassc-rails'
 gem 'faker'
+gem 'rack-cors'
+gem 'simple_token_authentication', '~> 1.0'
+gem 'devise'
 
 group :development do
   gem 'htmlbeautifier'

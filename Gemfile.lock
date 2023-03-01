@@ -214,6 +214,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-cors (2.0.0)
+      rack (>= 2.0.0)
     rack-protection (2.2.0)
       rack
     rack-test (1.1.0)
@@ -302,6 +304,10 @@ GEM
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    simple_token_authentication (1.18.1)
+      actionmailer (>= 3.2.6, < 8)
+      actionpack (>= 3.2.6, < 8)
+      devise (>= 3.2, < 6)
     sinatra (2.2.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -363,6 +369,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara
+  devise
   dotenv-rails
   draft_generators!
   factory_bot_rails
@@ -376,12 +383,14 @@ DEPENDENCIES
   pg
   pry-rails
   puma (~> 4.1)
+  rack-cors
   rails (~> 6.0.3, >= 6.0.3.2)
   rails_db (= 2.3.1)
   rspec-html-matchers
   rspec-rails
   rufo
   sassc-rails
+  simple_token_authentication (~> 1.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets (< 4)
