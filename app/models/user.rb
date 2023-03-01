@@ -22,4 +22,17 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many  :tasks, class_name: "Task", foreign_key: "commenter_id", dependent: :destroy
+
+  validates :username, 
+    presence: true, 
+    uniqueness: true,
+    format: { 
+      with: /\A[\w_\.]+\z/i,
+      message: "can only contain letters, numbers, periods, and underscores"
+      }
+
+
+
 end
